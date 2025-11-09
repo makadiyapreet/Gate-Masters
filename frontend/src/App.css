@@ -1,0 +1,99 @@
+/*
+====================================================================
+GATE Master: Master Theme & Styling File (Light Mode Only)
+====================================================================
+This file controls the entire visual identity of the application.
+*/
+
+/* --- PART 0: FONT IMPORT --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* --- ☀️ Light Mode Theme Variables --- */
+:root {
+  /* Primary Colors */
+  --bs-primary: #1a237e;
+  --bs-primary-rgb: 26, 35, 126;
+  --bs-secondary: #5c6bc0;
+  --bs-secondary-rgb: 92, 107, 192;
+
+  /* Accent Colors */
+  --bs-success: #52B788;
+  --bs-danger: #EF4444;
+  --bs-warning: #ff5252;
+  --bs-info: #5c6bc0;
+
+  /* Neutral & Text Colors */
+  --bs-body-bg: #f5f7fa;
+  --bs-body-color: #212121;
+  --bs-secondary-color: #757575;
+  --bs-light: #f5f7fa;
+  --bs-light-rgb: 245, 247, 250;
+  
+  /* Surface & Border Colors */
+  --bs-card-bg: #ffffff;
+  --bs-card-cap-bg: #ffffff;
+  --bs-list-group-bg: #ffffff;
+  --bs-modal-content-bg: #ffffff;
+  --bs-border-color: #e0e0e0;
+  --bs-table-striped-bg: #f8f9fa;
+  --bs-table-bg: #ffffff;
+
+  /* Custom Quiz Colors */
+  --gate-correct: var(--bs-success);
+  --gate-wrong: var(--bs-danger);
+
+  /* Global Styles */
+  --bs-font-sans-serif: 'Poppins', system-ui, sans-serif;
+  --bs-border-radius: 0.5rem;
+  --bs-card-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* --- Global Styles & Overrides --- */
+body {
+  background-color: var(--bs-body-bg);
+  font-family: var(--bs-font-sans-serif);
+  color: var(--bs-body-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--bs-secondary);
+  border-color: var(--bs-secondary);
+}
+
+.card {
+  border: 1px solid var(--bs-border-color);
+  box-shadow: var(--bs-card-shadow);
+}
+
+.text-correct { color: var(--gate-correct); font-weight: 500; }
+.text-wrong { color: var(--gate-wrong); font-weight: 500; }
+
+main.flex-grow-1 {
+  flex: 1;
+}
+
+/* ====================================================================
+PART 4: COMPONENT-SPECIFIC STYLES
+==================================================================== */
+
+/* --- Navbar Styles --- */
+.navbar {
+  background-color: var(--bs-card-bg);
+  border-bottom: 1px solid var(--bs-border-color);
+}
+
+/* --- Background Light Classes --- */
+.bg-light {
+  background-color: var(--bs-light) !important;
+  color: var(--bs-body-color) !important;
+}
+
+.bg-light .text-muted {
+  color: var(--bs-secondary-color) !important;
+}
+
+/* --- Accordion Styles --- */
+.accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: var(--bs-secondary);
+}
